@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Offline RSS Reader</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/primitive-ui/dist/css/main.css" />
+  </head>
+
+  <body>
+    <div class="small-container">
+      <h1>Offline RSS Reader</h1>
+
+      <form>
+        <input id="newFeed" type="text" placeholder="Add RSS Feed" required />
+      </form>
+      
+      <h2>Feeds</h2>
+      <ul id="nav"></ul>
+
+      <h2>Posts</h2>
+      <ul id="posts"></ul>
+
+      <button id="nuke">Nuke all data</button>
+    </div>
+  
+    <script src="scripts.js"></script>
+  </body>
+</html>
