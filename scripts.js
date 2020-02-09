@@ -14,7 +14,7 @@ const data = JSON.parse(localStorage.getItem('feeds'));
 
 // load posts from an RSS feed
 const viewFeed = (event) => {
-  loadDoc(event.srcElement.text);
+  let posts = loadDoc(event.srcElement.text);
 }
 
 // append <li> to nav
@@ -56,7 +56,15 @@ function loadDoc(url) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("posts").innerHTML = this.responseText;
+      let parser = new DOMParser()
+      let doc = parser.parseFromString(this.responseText, "text/xml");
+      var rss = doc.childNodes;
+      var channel = rss[0].childNodes;
+      console.log(channel);
+      //document.getElementById("posts").innerHTML = this.responseText;
+      channel.forEach(item => {
+        // do something, like append some html to the page for this post
+      });
     }
   };
   xhttp.open("GET", url, true);
