@@ -1,4 +1,7 @@
 # RSS Reader
+
+An offline-first, IPFS compatible, RSS reader that uses local storage.
+
 ### Roadmap
 
 - [ ] Parse posts
