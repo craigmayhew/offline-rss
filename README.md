@@ -9,3 +9,4 @@ An offline-first, IPFS compatible, RSS reader that uses local storage.
 - [ ] Parse posts
 - [ ] Remember which posts are read, and don't display them
 - [ ] Import/export of state
+- [ ] Convince everyone on the internet to  open CORS to * on atom/rss feeds
